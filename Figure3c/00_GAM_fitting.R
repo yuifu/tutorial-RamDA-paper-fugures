@@ -34,10 +34,11 @@ dtEx %>% setkey(transcript_id)
 # Load pseudotime data
 dtPseudotime = fread(pathPseudotime, header = TRUE)
 pseudotime = dtPseudotime[, Pseudotime]
+selCol = dtPseudotime[, label]
 
 ####################################
 # Define expression matrix (Select cells (columns) in ES-PrE differentiation timecourse dataset)
-matEx = dtPseudotime[, selCol, with=FALSE]
+matEx = dtEx[, selCol, with=FALSE]
 matEx = log10(matEx+1)
 
 ####################################
