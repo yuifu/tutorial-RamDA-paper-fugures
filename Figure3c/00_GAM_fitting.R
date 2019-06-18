@@ -46,12 +46,12 @@ matEx = log10(matEx+1)
 idx = 1:nrow(matEx)
 
 listFit0 = lapply(idx, function(i){
-		y = matEx[i,]
+		y = unlist(matEx[i,])
 		gam(y~1, family=gaussian(link=identity))
 	})
 
 listFit = lapply(idx, function(i){
-		y = matEx[i,]
+		y = unlist(matEx[i,])
 		gam(y~s(pseudotime), family=gaussian(link=identity))
 	})
 
