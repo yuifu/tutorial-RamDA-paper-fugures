@@ -6,11 +6,16 @@ Hayashi et al., Nature Communications (2018) https://doi.org/10.1038/s41467-018-
 
 ![](workflow_fig3c.png)
 
+## Test environment
+- mac OS High Sierra (version 10.13.6), R version 3.6.0
+- Linux, Docker `r-base:3.6.0`
 
-## Install and run
+
+## Install
 ### Requirement
 - R version 3.6.0
 - git
+- git-lsf
 
 ### Required R packages
 
@@ -23,16 +28,31 @@ Hayashi et al., Nature Communications (2018) https://doi.org/10.1038/s41467-018-
 - dtplyr
 - R.utils
 
+### Install git-lsf
 
-### Test environment
-- mac OS High Sierra (version 10.13.6), R version 3.6.0
-- Linux, Docker `r-base:3.6.0`
+#### Using Homebrew or MacPorts
 
+- To use Homebrew, run `brew install git-lfs`.
+- To use MacPorts, run `port install git-lfs`.
 
-### Run
+Then, verify that the installation was successful:
+
+```
+$ git lfs install
+> Git LFS initialized.
+```
+
+#### Not using Homebrew or MacPorts
+
+See https://help.github.com/en/articles/installing-git-large-file-storage.
+
+## Run
+
+Before run, please install `git-lsf` (see the above).
+
+### Run with local R
 
 Please execute the following command on shell:
-
 
 ```
 $ git clone git@github.com:yuifu/tutorial-RamDA-paper-fugures.git
