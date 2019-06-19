@@ -15,7 +15,7 @@ Hayashi et al., Nature Communications (2018) https://doi.org/10.1038/s41467-018-
 ### Requirement
 - R version 3.6.0
 - git
-- git-lsf
+- git-lfs
 
 ### Required R packages
 
@@ -28,7 +28,7 @@ Hayashi et al., Nature Communications (2018) https://doi.org/10.1038/s41467-018-
 - dtplyr
 - R.utils
 
-### Install git-lsf
+### Install git-lfs
 
 #### Using Homebrew or MacPorts
 
@@ -48,7 +48,7 @@ See https://help.github.com/en/articles/installing-git-large-file-storage.
 
 ## Run
 
-Before run, please install `git-lsf` (see the above).
+Before run, please install `git-lfs` (see the above).
 
 ### Run with local R
 
