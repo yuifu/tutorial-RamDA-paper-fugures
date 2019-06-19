@@ -95,8 +95,8 @@ write.table(dtRes, ofile, row.names = F, quote = F, sep = "\t")
 dtRes2 = dtEx[idx, "transcript_id", with=FALSE]
 dtRes2 = cbind(dtRes2, fittedValues)
 
-ofile = sprintf("%s/%s", odir, "fittedValues.txt")
-write.table(dtRes2, ofile, row.names = F, quote = F, sep = "\t")
+ofile = sprintf("%s/%s", odir, "fittedValues.txt.gz")
+write.table(dtRes2, gzfile(ofile), row.names = F, quote = F, sep = "\t")
 
 ####################################
 # Save fitting results as Rdata
